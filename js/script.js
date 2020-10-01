@@ -1,8 +1,5 @@
 "use strict";
 
-console.log('ready');
-
-
 function testWebP(callback) {
 
    var webP = new Image();
@@ -25,7 +22,7 @@ testWebP(function (support) {
 
 // button-call-me 
 
-const btnCallMe = document.querySelector('.call-me');
+const btnCallMe = document.querySelector('.callme');
 
 let stickyNavbar = document.querySelector('.header__row2').offsetTop;
 
@@ -113,8 +110,6 @@ window.addEventListener('click', (e) => {
 
 
 // Button Search
-
-
 
 document.querySelector('.navbar-search').addEventListener('click', () => {
 
