@@ -1899,7 +1899,7 @@ footer:before {
         -ms-flex-align: center;
             align-items: center;
     margin: 0 0px 0 auto;
-    cursor: pointer;
+    z-index: 8;
   }
 
   .navbar__shopping {

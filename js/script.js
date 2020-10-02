@@ -20,7 +20,7 @@ testWebP(function (support) {
 
 
 
-// button-call-me 
+// Button-call-me 
 
 const btnCallMe = document.querySelector('.callme');
 
@@ -34,7 +34,9 @@ window.addEventListener('scroll', () => {
    let navbar = document.querySelector('.header__row2');
 
    if (window.pageYOffset >= stickyNavbar) {
+
       navbar.classList.add("sticky");
+
    } else {
 
       navbar.classList.remove("sticky");
@@ -46,7 +48,7 @@ window.addEventListener('scroll', () => {
 
 
 
-// button morephones
+// Button header morephones
 
 document.querySelector('.hdr-links__phones').addEventListener('click', () => {
    let elem = document.querySelector('.phones__morephones');
@@ -65,7 +67,7 @@ document.querySelector('.hdr-links__phones').addEventListener('click', () => {
 })
 
 
-// Button footer-morephones
+// Button footer morephones
 
 
 document.querySelector('.ftr-contacts__phones').addEventListener('click', () => {
@@ -126,12 +128,12 @@ document.querySelector('.navbar-search').addEventListener('click', () => {
 })
 
 
-document.querySelector('.navbar__link-searсh').addEventListener('click', () => {
+document.querySelector('.navbar__link-searсh').addEventListener('click', (e) => {
 
    document.querySelector('.navbar__link-search-icon').classList.toggle('search--active');
    document.querySelector('.navbar-search__block').classList.toggle('search--active');
-
    document.querySelector('.link-search__close').classList.toggle('search--active');
+   e.preventDefault();
 
 })
 
@@ -152,14 +154,22 @@ window.addEventListener('resize', () => {
       document.querySelector('.link-search__close').classList.remove('search--active');
 
    }
+
+   if (document.querySelector('.navbar__burger').matches('.menu-active') && document.documentElement.clientWidth > 991) {
+
+      document.querySelector('.navbar__burger').classList.remove('menu-active');
+      document.querySelector('.navbar__list').classList.remove('menu-active');
+      document.querySelector('body').classList.remove('lock');
+
+   }
 })
 
-// // MENU-BOTTOM-BURGER
+//  Buttom BURGER
 
 
-document.addEventListener("DOMContentLoaded", MenuBurgerOpen);
+document.addEventListener("DOMContentLoaded", menuBurgerOpen);
 
-function MenuBurgerOpen() {
+function menuBurgerOpen() {
 
    let elemButton = document.querySelector('.navbar__burger');
 
