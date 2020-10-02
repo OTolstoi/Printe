@@ -89,11 +89,9 @@ window.addEventListener('click', (e) => {
 
    if (document.querySelector('.phones__morephones').matches('.phones--active') && !e.target.closest('.hdr-links__phones')) {
 
-
       document.querySelector('.phones__morephones').classList.remove('phones--active');
       document.querySelector('.morephones__arrow1').classList.remove('phones--active');
       document.querySelector('.morephones__arrow2').classList.remove('phones--active');
-
 
    }
 
@@ -103,7 +101,6 @@ window.addEventListener('click', (e) => {
       document.querySelector('.ftr-contacts-phones__arrow1').classList.remove('phones--active');
       document.querySelector('.ftr-contacts-phones__arrow2').classList.remove('phones--active');
 
-
    }
 
 })
@@ -112,6 +109,14 @@ window.addEventListener('click', (e) => {
 // Button Search
 
 document.querySelector('.navbar-search').addEventListener('click', () => {
+
+   if (document.querySelector('.navbar__burger').matches('.menu-active')) {
+
+      document.querySelector('.navbar__burger').classList.remove('menu-active');
+      document.querySelector('.navbar__list').classList.remove('menu-active');
+      document.querySelector('body').classList.remove('lock');
+   }
+
 
    document.querySelector('.navbar-search--hide').classList.toggle('search--active');
    document.querySelector('.navbar-search__block').classList.toggle('search--active');
@@ -133,6 +138,7 @@ document.querySelector('.navbar__link-searсh').addEventListener('click', () => 
 
 window.addEventListener('resize', () => {
    if (document.querySelector('.navbar-search__block').matches('.search--active')) {
+
       document.querySelector('.navbar-search--hide').classList.add('search--active');
       document.querySelector('.navbar-search__close').classList.add('search--active');
       document.querySelector('.navbar__link-search-icon').classList.add('search--active');
@@ -158,10 +164,16 @@ function MenuBurgerOpen() {
 
    elemButton.addEventListener('click', () => {
 
+      if (document.querySelector('.navbar-search__block').matches('.search--active')) {
+
+         document.querySelector('.navbar-search--hide').classList.remove('search--active');
+         document.querySelector('.navbar-search__block').classList.remove('search--active');
+         document.querySelector('.navbar-search__close').classList.remove('search--active');
+
+      }
 
       document.querySelector('.navbar__burger').classList.toggle('menu-active');
       document.querySelector('.navbar__list').classList.toggle('menu-active');
-
       document.querySelector('body').classList.toggle('lock');
 
 

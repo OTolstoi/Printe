@@ -745,6 +745,7 @@ body.lock {
   height: 62px;
   width: calc(100% + 30px);
   background-color: rgba(255, 255, 255, 0.934);
+  border-bottom: 1px solid #E8EDF2;
   padding: 8px 10px;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
@@ -799,10 +800,12 @@ body.lock {
 
 .navbar-search__input input {
   width: 98%;
-  font-size: 16px;
+  font-size: 17px;
   height: 90%;
   padding: 4px 11px 4px 11px;
   border-radius: 3px;
+  border: 1px solid #E8EDF2;
+  opacity: 0.75;
 }
 
 .navbar__personal {
@@ -1249,20 +1252,19 @@ body.lock {
 footer {
   margin: 49px 0 0 0;
   position: relative;
-  padding: 0 0 30px 0;
   max-height: 159px;
   -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.05);
           box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.05);
 }
 
-.footer:before {
+footer:before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/footer-bgr-img.png");
+  background: url("../img/footer-bgr-img.png") repeat;
   opacity: 0.03;
   z-index: -1;
 }
@@ -1650,7 +1652,7 @@ footer {
 .callme {
   position: fixed;
   bottom: 100px;
-  right: 8px;
+  right: 10%;
   width: 108px;
   height: 108px;
   display: -webkit-box;
@@ -1668,7 +1670,7 @@ footer {
           align-items: center;
   background-color: #1AB0CE;
   border-radius: 50%;
-  z-index: 12;
+  z-index: 10;
   opacity: 1;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
@@ -1694,6 +1696,24 @@ footer {
   text-align: center;
   font-weight: bold;
   margin: 5px 0 0 0;
+}
+
+@media (max-width: 1799px) {
+  .callme {
+    right: 5%;
+  }
+}
+
+@media (max-width: 1579px) {
+  .callme {
+    right: 20px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .callme {
+    right: 6px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -1927,6 +1947,16 @@ footer {
     margin: 0 10px;
   }
 
+  footer {
+    max-height: none;
+  }
+
+  .footer__body {
+    max-height: none;
+    height: auto;
+    padding: 20px 0 0 0;
+  }
+
   .footer__row {
     max-height: none;
     -ms-flex-wrap: wrap;
@@ -1999,8 +2029,19 @@ footer {
   }
 
   .callme {
-    right: 6px;
+    width: 90px;
+    height: 90px;
     opacity: 0.75;
+  }
+
+  .callme__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .callme__text {
+    font-weight: normal;
+    font-size: 13px;
   }
 }
 
@@ -2059,21 +2100,6 @@ footer {
 
   .footer__links-hide {
     margin: 10px 0 15px 0;
-  }
-
-  .callme {
-    width: 90px;
-    height: 90px;
-  }
-
-  .callme__icon {
-    width: 22px;
-    height: 22px;
-  }
-
-  .callme__text {
-    font-weight: normal;
-    font-size: 13px;
   }
 }
 
@@ -2310,4 +2336,4 @@ footer {
 
 .webp .print{ background: url(../img/main-img.webp) center/cover no-repeat; }
 
-.webp .footer:before{ background-image: url(../img/footer-bgr-img.webp); }
+.webp footer:before{ background: url(../img/footer-bgr-img.webp) repeat; }
