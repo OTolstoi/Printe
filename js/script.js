@@ -145,6 +145,7 @@ window.addEventListener('resize', () => {
       document.querySelector('.link-search__close').classList.add('search--active');
 
    } else {
+
       document.querySelector('.navbar-search--hide').classList.remove('search--active');
       document.querySelector('.navbar-search__close').classList.remove('search--active');
       document.querySelector('.navbar__link-search-icon').classList.remove('search--active');
