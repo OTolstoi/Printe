@@ -287,24 +287,7 @@ body.lock {
   transition: all 0.4s ease;
 }
 
-.morephones__arrow1 {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  background-color: #fff;
-  position: absolute;
-  width: 7px;
-  height: 1px;
-  top: 10px;
-  left: 4px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
+.morephones__arrow1,
 .morephones__arrow2 {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -314,13 +297,23 @@ body.lock {
   width: 7px;
   height: 1px;
   top: 10px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.morephones__arrow1 {
+  left: 4px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.morephones__arrow2 {
   right: 4px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
 }
 
 .morephones__arrow1.phones--active {
@@ -609,6 +602,10 @@ body.lock {
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+
+.navbar__list.scroll {
+  height: calc(100vh - 51px);
 }
 
 .navbar__list.menu-active {
@@ -1468,24 +1465,7 @@ footer:before {
   transition: all 0.4s ease;
 }
 
-.ftr-contacts-phones__arrow1 {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  background-color: #3A4047;
-  position: absolute;
-  width: 7px;
-  height: 1px;
-  top: 10px;
-  left: 4px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
+.ftr-contacts-phones__arrow1,
 .ftr-contacts-phones__arrow2 {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1495,13 +1475,23 @@ footer:before {
   width: 7px;
   height: 1px;
   top: 10px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.ftr-contacts-phones__arrow1 {
+  left: 4px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.ftr-contacts-phones__arrow2 {
   right: 4px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
 }
 
 .ftr-contacts-phones__arrow1.phones--active {
@@ -1688,7 +1678,7 @@ footer:before {
 
 .callme__icon img {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 
 .callme__text {
@@ -1863,7 +1853,7 @@ footer:before {
     -o-transition: all .4s ease;
     transition: all .4s ease;
     height: auto;
-    padding: 20px 0 0 0;
+    padding: 15px 0 0 0;
   }
 
   .navbar__link {
